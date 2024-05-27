@@ -1,0 +1,19 @@
+<div class="property-list">
+    <h2>Properties Overview</h2>
+    <div *ngIf="error$ | async as error" class="error">
+      <p>Error loading properties: {{ error }}</p>
+    </div>
+    <ul>
+      <li *ngFor="let property of properties$ | async">
+        <h3>{{ property.name }} ({{ property.location }})</h3>
+        <p>Current Price: {{ property.price | currency:'USD' }}</p>
+        <h4>Historical Prices:</h4>
+        <p *ngIf="property.history">[{{ property.history.join(', ') }}]</p>
+        <h4>Recent News:</h4>
+        <ul>
+          <li *ngFor="let article of property.news">{{ article }}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  

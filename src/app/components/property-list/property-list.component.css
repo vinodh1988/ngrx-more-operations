@@ -1,0 +1,16 @@
+.property-list {
+    h2 {
+      color: #2c3e50;
+    }
+    h3 {
+      color: #34495e;
+    }
+    li {
+      list-style-type: none;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #7f8c8d;
+    }
+  }
+  

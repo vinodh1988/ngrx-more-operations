@@ -82,8 +82,10 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular-builders/jest:run",
           "options": {
+            "coverage": true,
+            "passWithNoTests": true,
             "polyfills": [
               "zone.js",
               "zone.js/testing"
